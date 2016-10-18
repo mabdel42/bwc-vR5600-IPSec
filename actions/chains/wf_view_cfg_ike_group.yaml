@@ -1,0 +1,29 @@
+---
+    chain:
+        -
+            name: "sh_sec_vpn_ipsec_ike_group"
+            ref: "vR5600_IPSec.sh_sec_vpn_ipsec_ike_group"
+            parameters:
+                deviceIP: "{{deviceIP}}"
+                login: "{{login}}"
+                password: "{{password}}"
+                ikeGroup: "{{ikeGroup}}"
+            publish:
+                cfgId: "{{ sh_sec_vpn_ipsec_ike_group.stdout }}"
+            on-success: "get_location"
+            on-failure: "fail_status"
+        -
+            name: "get_location"
+            ref: "vR5600_base.get_location"
+            parameters:
+                deviceIP: "{{deviceIP}}"
+                login: "{{login}}"
+                password: "{{password}}"
+                cmd_path: "{{cfgId}}"
+            on-failure: "fail_status"
+        -
+            name: "fail_status"
+            ref: "core.local"
+            parameters:
+                cmd: "echo fail"
+    default: "sh_sec_vpn_ipsec_ike_group"

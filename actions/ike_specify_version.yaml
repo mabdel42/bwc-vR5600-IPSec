@@ -1,0 +1,53 @@
+---
+name: "ike_specify_version"
+description: "Specifies the IKE version of IKE group"
+pack: vR5600_IPSec
+runner_type: "python-script"
+entry_point: "ike_specify_version.py"
+parameters:
+    deviceIP:
+        type: string
+        description: IP address of vRouter
+        required: true
+    login:
+        type: string
+        description: Login of vRouter
+        required: true
+    password:
+        type: string
+        description: Password of vRouter
+        required: true
+    cmd_path:
+        type: string
+        description: Command path of the configuration session
+        required: true
+    ikeGroup:
+        type: string
+        description: IKE Group 
+        required: true
+#    proposal:
+#        type: integer
+#        description: IKE proposal
+#        required: true
+    ikeVersion:
+        type: integer
+        description: IKE version 
+        required: true
+#    encryption:
+#        type: string
+#        description: encryption algorithm for IKE grop 
+#        required: true
+#    hashAlg:
+#        type: string
+#        description: hash algorithm for IKE grop
+#        required: true
+#    lifetime:
+#        type: integer
+#        description: lifetime of the IKE group
+#        required: true
+enabled: true
+notify:
+  on-complete:
+    message: "\"@channel: Action succeeded.\""
+    routes:
+      - "slack"

@@ -1,0 +1,9 @@
+---
+name: vR5600_IPSec
+description: Contains actions and workflows to manipulate IPSec tunnels on vRouter
+keywords:
+    - example
+    - test
+version: 0.1
+author: Mehdi Abdelouahab
+email: mabdelou@brocade.com

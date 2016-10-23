@@ -1,0 +1,105 @@
+---
+name: "wf_cfg_ipsec"
+description: "Configures IPSec Tunnel between two vRouters"
+pack: vR5600_IPSec
+runner_type: "action-chain"
+entry_point: "chains/wf_cfg_ipsec.yaml"
+parameters:
+    eastDeviceIP:
+        type: string
+        description: IP address of East vRouter
+        required: true
+    eastLogin:
+        type: string
+        description: login of East vRouter
+        required: true
+    eastPassword:
+        type: string
+        description: password of East vRouter
+        required: true
+    eastTunnelIP:
+        type: string
+        description: IP address of the tunnel end on East vRouter
+        required: true    
+    eastPrefix:
+        type: string
+        description: IP Prefix of East vRouter
+        required: true      
+    westDeviceIP:
+        type: string
+        description: IP address of West vRouter
+        required: true
+    westLogin:
+        type: string
+        description: login of West vRouter
+        required: true
+    westPassword:
+        type: string
+        description: password of West vRouter
+        required: true
+    westTunnelIP:
+        type: string
+        description: IP address of the tunnel end on West vRouter
+        required: true    
+    westPrefix:
+        type: string
+        description: IP Prefix of West vRouter
+        required: true     
+    ikeGroup:
+        type: string
+        description: IKE Group 
+        required: true
+    ikeProposal:
+        type: integer
+        description: Proposal of IKE Group 
+        required: true
+    ikeVersion:
+        type: integer
+        description: IKE version 
+        required: true
+    ikeEncryption:
+        type: string
+        description: Encryption algorithm for IKE group  
+        required: true
+    ikeHashAlg:
+        type: string
+        description: hash algorithm for IKE group
+        required: true
+    ikeLifetime:
+        type: string
+        description: Lifetime of the IKE group
+        required: true
+    espGroup:
+        type: string
+        description: IKE Group 
+        required: true
+    espProposal:
+        type: integer
+        description: Proposal of ESP Group 
+        required: true    
+    espEncryption:
+        type: string
+        description: Encryption algorithm for ESP group  
+        required: true
+    espHashAlg:
+        type: string
+        description: hash algorithm for ESP group
+        required: true
+    espLifetime:
+        type: string
+        description: Lifetime of the ESP group
+        required: true
+    psk:
+        type: string
+        description: Pre Shared Key
+        required: true
+    tunnelID:
+        type: string
+        description: Tunnel ID
+        required: true    
+enabled: true
+notify:
+  on-complete:
+    message: "\"@channel: Action succeeded.\""
+    routes:
+      - "slack"

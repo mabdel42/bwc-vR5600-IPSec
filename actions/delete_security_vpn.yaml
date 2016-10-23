@@ -1,15 +1,9 @@
 ---
-# Action definition metadata
 name: "delete_security_vpn"
-description: "Delete the VPN configuration on the vR"
+description: "Deletes the VPN configuration"
 pack: vR5600_IPSec
-# `runner_type` has value `action-chain` to identify that action is an ActionChain.
 runner_type: "python-script"
-
-# `entry_point` path to the ActionChain definition file, relative to the pack's action directory.
 entry_point: "delete_security_vpn.py"
-
-# Parameters of the action chain.
 parameters:
     deviceIP:
         type: string
@@ -27,9 +21,7 @@ parameters:
         type: string
         description: Command path of the configuration session
         required: true
-
 enabled: true
-
 notify:
   on-complete:
     message: "\"@channel: Action succeeded.\""

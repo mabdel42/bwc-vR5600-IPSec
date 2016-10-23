@@ -1,9 +1,9 @@
 ---
-name: "wf_cfg_ike"
-description: "Configures IKE"
+name: "wf_cfg_conn"
+description: "Configures connection for IPSec"
 pack: vR5600_IPSec
 runner_type: "action-chain"
-entry_point: "chains/wf_cfg_ike.yaml"
+entry_point: "chains/wf_cfg_conn.yaml"
 parameters:
     deviceIP:
         type: string
@@ -17,29 +17,37 @@ parameters:
         type: string
         description: Password of vRouter
         required: true
-    proposal:
-        type: integer
-        description: IKE proposal
+    peerIP:
+        type: string
+        description: IP Address of the remote peer
+        required: true    
+    psk:
+        type: string
+        description: Pre-Shared-Key 
         required: true
     ikeGroup:
         type: string
         description: IKE Group 
         required: true
-    ikeVersion:
-        type: integer
-        description: IKE version 
-        required: true
-    encryption:
+    espGroup:
         type: string
-        description: encryption algorithm for IKE grop 
+        description: ESP Group 
         required: true
-    hashAlg:
+    localIP:
         type: string
-        description: hash algorithm for IKE grop
+        description: Local IP Address 
         required: true
-    lifetime:
+    tunnelID:
         type: integer
-        description: lifetime of the IKE group
+        description: Tunnel ID
+        required: true
+    localPrefix:
+        type: string
+        description: Local IP prefix for the tunnel
+        required: true
+    remotePrefix:
+        type: string
+        description: Remote IP prefix for the tunnel
         required: true
 enabled: true
 notify:

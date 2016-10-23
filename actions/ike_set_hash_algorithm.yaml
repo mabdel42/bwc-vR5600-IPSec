@@ -1,9 +1,9 @@
 ---
-name: "wf_cfg_ike"
-description: "Configures IKE"
+name: "ike_set_hash_algorithm"
+description: "Set hash algorithm for IKE Group"
 pack: vR5600_IPSec
-runner_type: "action-chain"
-entry_point: "chains/wf_cfg_ike.yaml"
+runner_type: "python-script"
+entry_point: "ike_set_hash_algorithm.py"
 parameters:
     deviceIP:
         type: string
@@ -17,30 +17,34 @@ parameters:
         type: string
         description: Password of vRouter
         required: true
-    proposal:
-        type: integer
-        description: IKE proposal
+    cmd_path:
+        type: string
+        description: Command path of the configuration session
         required: true
     ikeGroup:
         type: string
         description: IKE Group 
         required: true
-    ikeVersion:
+    proposal:
         type: integer
-        description: IKE version 
+        description: IKE proposal
         required: true
-    encryption:
-        type: string
-        description: encryption algorithm for IKE grop 
-        required: true
+#    ikeVersion:
+#        type: integer
+#        description: IKE version 
+#        required: true
+#    encryption:
+#        type: string
+#        description: encryption algorithm for IKE grop 
+#        required: true
     hashAlg:
         type: string
         description: hash algorithm for IKE grop
         required: true
-    lifetime:
-        type: integer
-        description: lifetime of the IKE group
-        required: true
+#    lifetime:
+#        type: integer
+#        description: lifetime of the IKE group
+#        required: true
 enabled: true
 notify:
   on-complete:

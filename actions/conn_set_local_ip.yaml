@@ -1,0 +1,61 @@
+---
+name: "conn_set_local_ip"
+description: "Specify the IP Address used for the tunnel"
+pack: vR5600_IPSec
+runner_type: "python-script"
+entry_point: "conn_set_local_ip.py"
+parameters:
+    deviceIP:
+        type: string
+        description: IP address of vRouter
+        required: true
+    login:
+        type: string
+        description: Login of vRouter
+        required: true
+    password:
+        type: string
+        description: Password of vRouter
+        required: true
+    cmd_path:
+        type: string
+        description: Command path of the configuration session
+        required: true    
+    peerIP:
+        type: string
+        description: IP Address of the remote peer
+        required: true    
+#    psk:
+#        type: string
+#        description: Pre-Shared-Key 
+#        required: true
+#    ikeGroup:
+#        type: string
+#        description: IKE Group 
+#        required: true
+#    espGroup:
+#        type: string
+#        description: ESP Group 
+#        required: true
+    localIP:
+        type: string
+        description: Local IP Address 
+        required: true
+#    TunnelID:
+#        type: integer
+#        description: Tunnel ID
+#        required: true
+#    localPrefix:
+#        type: string
+#        description: Local IP prefix for the tunnel
+#        required: true
+#    remotePrefix:
+#        type: string
+#        description: Remote IP prefix for the tunnel
+#        required: true
+enabled: true
+notify:
+  on-complete:
+    message: "\"@channel: Action succeeded.\""
+    routes:
+      - "slack"

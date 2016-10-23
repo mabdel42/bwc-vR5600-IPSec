@@ -1,15 +1,9 @@
 ---
-# Action definition metadata
 name: "wf_del_vpn"
-description: "Action-Chain workflow that deletes vpn config on the vRouter"
+description: "Deletes VPN configuration"
 pack: vR5600_IPSec
-# `runner_type` has value `action-chain` to identify that action is an ActionChain.
 runner_type: "action-chain"
-
-# `entry_point` path to the ActionChain definition file, relative to the pack's action directory.
 entry_point: "chains/wf_del_vpn.yaml"
-
-# Parameters of the action chain.
 parameters:
     deviceIP:
         type: string
@@ -23,9 +17,7 @@ parameters:
         type: string
         description: password the vRouter
         required: true
-
 enabled: true
-
 notify:
   on-complete:
     message: "\"@channel: Action succeeded.\""

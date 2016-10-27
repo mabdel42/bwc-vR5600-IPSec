@@ -1,6 +1,6 @@
 ---
 name: "conn_set_esp"
-description: "Specify the default ESP Group"
+description: "Specify default ESP Group"
 pack: vR5600_IPSec
 runner_type: "python-script"
 entry_point: "conn_set_esp.py"

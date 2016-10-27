@@ -1,6 +1,6 @@
 ---
 name: "wf_cfg_ike"
-description: "Configures IKE"
+description: "Workflow to configure IKE"
 pack: vR5600_IPSec
 runner_type: "action-chain"
 entry_point: "chains/wf_cfg_ike.yaml"

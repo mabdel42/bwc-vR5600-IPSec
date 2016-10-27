@@ -1,6 +1,6 @@
 ---
 name: "ike_create_cfg_node"
-description: "Creates a configuration node proposal for IKE Group"
+description: "Create config node proposal for IKE Group"
 pack: vR5600_IPSec
 runner_type: "python-script"
 entry_point: "ike_create_cfg_node.py"

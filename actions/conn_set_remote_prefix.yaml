@@ -1,6 +1,6 @@
 ---
 name: "conn_set_remote_prefix"
-description: "Provides the remote subnet for the tunnel"
+description: "Provide remote subnet for the tunnel"
 pack: vR5600_IPSec
 runner_type: "python-script"
 entry_point: "conn_set_remote_prefix.py"

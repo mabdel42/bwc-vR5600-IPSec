@@ -1,6 +1,6 @@
 ---
 name: "esp_create_cfg_node"
-description: "Creates a configuration node proposal for an ESP Group"
+description: "Create config node proposal for ESP Group"
 pack: vR5600_IPSec
 runner_type: "python-script"
 entry_point: "esp_create_cfg_node.py"

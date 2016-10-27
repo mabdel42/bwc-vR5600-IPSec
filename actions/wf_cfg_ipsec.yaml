@@ -1,6 +1,6 @@
 ---
 name: "wf_cfg_ipsec"
-description: "Configures IPSec Tunnel between two vRouters"
+description: "Workflow to configure IPSec Tunnel"
 pack: vR5600_IPSec
 runner_type: "action-chain"
 entry_point: "chains/wf_cfg_ipsec.yaml"

@@ -1,6 +1,6 @@
 ---
 name: "wf_cfg_conn"
-description: "Configures connection for IPSec"
+description: "Workflow to configure connection for IPSec"
 pack: vR5600_IPSec
 runner_type: "action-chain"
 entry_point: "chains/wf_cfg_conn.yaml"

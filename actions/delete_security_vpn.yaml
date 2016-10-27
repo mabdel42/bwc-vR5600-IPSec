@@ -1,6 +1,6 @@
 ---
 name: "delete_security_vpn"
-description: "Deletes the VPN configuration"
+description: "Delete VPN configuration"
 pack: vR5600_IPSec
 runner_type: "python-script"
 entry_point: "delete_security_vpn.py"

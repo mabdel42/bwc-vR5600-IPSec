@@ -1,6 +1,6 @@
 ---
 name: "esp_set_encryption_cipher"
-description: "Set encryption cipher for an ESP Group"
+description: "Set encryption cipher for ESP Group"
 pack: vR5600_IPSec
 runner_type: "python-script"
 entry_point: "esp_set_encryption_cipher.py"

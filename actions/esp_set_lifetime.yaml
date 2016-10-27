@@ -1,6 +1,6 @@
 ---
 name: "esp_set_lifetime"
-description: "Set lifetime for an ESP Group"
+description: "Set lifetime for ESP Group"
 pack: vR5600_IPSec
 runner_type: "python-script"
 entry_point: "esp_set_lifetime.py"

@@ -1,6 +1,6 @@
 ---
 name: "wf_cfg_esp"
-description: "Configures ESP"
+description: "Workflow to configure ESP"
 pack: vR5600_IPSec
 runner_type: "action-chain"
 entry_point: "chains/wf_cfg_esp.yaml"

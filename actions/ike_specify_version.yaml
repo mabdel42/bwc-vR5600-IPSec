@@ -1,6 +1,6 @@
 ---
 name: "ike_specify_version"
-description: "Specifies the IKE version of IKE group"
+description: "Specify IKE version of IKE group"
 pack: vR5600_IPSec
 runner_type: "python-script"
 entry_point: "ike_specify_version.py"

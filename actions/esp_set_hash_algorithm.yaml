@@ -1,6 +1,6 @@
 ---
 name: "esp_set_hash_algorithm"
-description: "Set hash algorithm for an ESP Group"
+description: "Set hash algorithm for ESP Group"
 pack: vR5600_IPSec
 runner_type: "python-script"
 entry_point: "esp_set_hash_algorithm.py"

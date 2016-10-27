@@ -1,6 +1,6 @@
 ---
 name: "conn_set_ike"
-description: "Specify the default IKE Group"
+description: "Specify default IKE Group"
 pack: vR5600_IPSec
 runner_type: "python-script"
 entry_point: "conn_set_ike.py"
